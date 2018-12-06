@@ -1,0 +1,30 @@
+<!Doctype html>
+<html lang="fr">
+
+<head>
+  <title>The Live comment! </title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/semantic/semantic.min.css">
+  <link rel="stylesheet" href="/assets/style/style.css">
+  </head>
+
+  <body>
+  <div class="ui fixed inverted menu">
+    <a href="/" class="header item">Acceuil</a>
+    </div>
+<div class="ui main container">
+  <!-- On verifie si la varibale error existe bien avec locals.error -->
+  <% if (locals.flash && locals.flash.error) { %>
+  <div class = "ui negative message">
+    <%= flash.error %>
+
+    </div>
+<% } %>
+
+  <!-- On verifie si la varibale success existe bien -->
+  <% if (locals.flash && locals.flash.success) { %>
+  <div class = "ui positive message">
+    <%= flash.success %>
+
+    </div>
+<% } %>

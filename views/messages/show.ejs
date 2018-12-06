@@ -1,0 +1,20 @@
+<%- include ../pages/header %>
+
+<div class="ui comments">
+
+    <div class="comment">
+
+      <a class="avatar" href="/message/<%= message.id %>">
+        <img src="https://cdn4.iconfinder.com/data/icons/eldorado-user/40/user-512.png">
+        </a>
+      <div class = "content">
+        <div class="metadata">
+          <div class="data">
+            <%= message.created_at.fromNow() %>
+            </div>
+        <div class="test"><%= message.content %></div>
+      </div>
+    </div>
+
+  <% } %>
+<%- include ../pages/footer %>
